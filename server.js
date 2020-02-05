@@ -15,10 +15,6 @@ app.use('/user' , require('./route/user'))
 
 
 
-
-
-
-
 app.listen(5000, () => {
     console.log("server is connected on port 5000");
 })

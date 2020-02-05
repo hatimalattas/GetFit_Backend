@@ -10,9 +10,13 @@ mongoose.connect('mongodb://localhost/project4', {useNewUrlParser : true , useUn
 // to use json
 app.use(express.json())
 app.use(express.urlencoded({extended :false}))
+
 app.use(cors())
 app.use('/user' , require('./route/user'))
-
+app.use('/workout' , require('./route/Workout'))
+app.use('/diet' , require('./route/diet'))
+app.use('/product' , require('./route/product'))
+app.use('/goal' , require('./route/goal'))
 
 
 app.listen(5000, () => {

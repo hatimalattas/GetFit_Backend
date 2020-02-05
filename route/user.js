@@ -57,5 +57,13 @@ router.post('/login', (req, res) => {
 })
 
 
+//get one user
 
+router.get('/:user' , (req , res) =>{
+
+    User.findById(req.params.user)
+    .then(user => res.json(user))
+    .catch(err => res.send(err))
+
+})
 module.exports = router
